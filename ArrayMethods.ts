@@ -19,11 +19,16 @@ function GuyMapIterator(arr: Array<any>, func: Function){
     }
     return newArray
 }
-console.log(GuyMapIterator(numArray, (value: any)=> value*2))
+// console.log(GuyMapIterator(numArray, (value: any)=> value*2))
 //'of' - value
 //'in' - index
 
-//reduce - accumulator will be array returned
-//Hello, I just got a new Sim and was advised to get intouch with support in order to add my existing phone number to the new sim, hope you can help
 
+const composableFunc = (str: string) =>
+    [str]
+        .map(s => s.trim())
+        .map(s => parseInt(s))
+        .map(s => s + 1)
 
+const result = composableFunc('  65 ')
+console.log(result)
